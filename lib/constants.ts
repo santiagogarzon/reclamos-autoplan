@@ -5,7 +5,7 @@ export const SITE_CONFIG = {
   city: "Córdoba, Argentina",
   email: "contacto@reclamosautoplan.com.ar",
   // Replace with real WhatsApp number: country code (54) + area code + number, no spaces or dashes
-  whatsappNumber: "5493510000000",
+  whatsappNumber: "5493512319509",
   whatsappMessage:
     "Hola, quiero consultar sobre una demora en la entrega de mi auto de autoplan.",
   domain: "https://reclamosautoplan.com.ar",
