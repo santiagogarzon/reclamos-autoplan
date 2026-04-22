@@ -2,19 +2,33 @@ import type { MetadataRoute } from "next";
 import { SITE_CONFIG } from "@/lib/constants";
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const base = SITE_CONFIG.canonicalUrl;
+  const now = new Date();
+
   return [
     {
-      url: SITE_CONFIG.canonicalUrl,
-      lastModified: new Date(),
+      url: base,
+      lastModified: now,
       changeFrequency: "monthly",
       priority: 1,
     },
-    // Agregá aquí futuras páginas SEO:
-    // {
-    //   url: `${SITE_CONFIG.canonicalUrl}/blog/demora-autoplan-como-reclamar`,
-    //   lastModified: new Date(),
-    //   changeFrequency: "weekly",
-    //   priority: 0.8,
-    // },
+    {
+      url: `${base}/demora-entrega-autoplan`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
+      url: `${base}/reclamo-plan-ahorro`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
+      url: `${base}/abogado-autoplan-cordoba`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
   ];
 }
