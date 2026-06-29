@@ -1,5 +1,6 @@
-import { WHATSAPP_HREF, SITE_CONFIG } from "@/lib/constants";
+import { SITE_CONFIG } from "@/lib/constants";
 import { ArrowRight, CheckCircle2, Shield } from "lucide-react";
+import WhatsAppLink from "@/components/ui/WhatsAppLink";
 
 export default function Hero() {
   return (
@@ -37,15 +38,13 @@ export default function Hero() {
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-3 mb-12">
-            <a
-              href={WHATSAPP_HREF}
-              target="_blank"
-              rel="noopener noreferrer"
+            <WhatsAppLink
+              location="hero_primary"
               className="inline-flex items-center justify-center gap-2.5 bg-[#25D366] hover:bg-[#1DAE56] text-white font-bold text-base px-7 py-4 rounded-xl transition-all duration-200 glow-green hover:scale-[1.02]"
             >
               <WhatsAppIcon className="w-5 h-5" />
               Consultar por WhatsApp
-            </a>
+            </WhatsAppLink>
             <a
               href="#casos"
               className="inline-flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 border border-white/15 hover:border-white/25 text-white font-semibold text-base px-7 py-4 rounded-xl transition-all duration-200"

@@ -1,5 +1,5 @@
-import { WHATSAPP_HREF } from "@/lib/constants";
 import Link from "next/link";
+import WhatsAppLink from "@/components/ui/WhatsAppLink";
 
 interface SeoHeroProps {
   eyebrow?: string;
@@ -67,15 +67,13 @@ export default function SeoHero({
         </p>
 
         <div className="flex flex-col sm:flex-row gap-3">
-          <a
-            href={WHATSAPP_HREF}
-            target="_blank"
-            rel="noopener noreferrer"
+          <WhatsAppLink
+            location="seo_hero"
             className="inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1DAE56] text-white font-bold text-base px-6 py-3.5 rounded-xl transition-all duration-200 shadow-lg shadow-green-900/30 hover:scale-[1.02]"
           >
             <WhatsAppIcon className="w-5 h-5" />
             {ctaLabel}
-          </a>
+          </WhatsAppLink>
           {secondaryLabel && secondaryHref && (
             <Link
               href={secondaryHref}

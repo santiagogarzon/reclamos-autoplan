@@ -1,6 +1,7 @@
 "use client";
 
 import { WHATSAPP_HREF } from "@/lib/constants";
+import { trackWhatsAppClick } from "@/lib/analytics";
 
 export default function WhatsAppButton() {
   return (
@@ -9,6 +10,7 @@ export default function WhatsAppButton() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Consultar por WhatsApp"
+      onClick={() => trackWhatsAppClick("floating_button")}
       className="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 bg-wa hover:bg-wa-hover text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105"
     >
       <WhatsAppIcon className="w-7 h-7" />

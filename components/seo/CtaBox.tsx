@@ -1,4 +1,7 @@
+"use client";
+
 import { WHATSAPP_HREF, SITE_CONFIG } from "@/lib/constants";
+import { trackWhatsAppClick } from "@/lib/analytics";
 
 interface CtaBoxProps {
   heading?: string;
@@ -29,6 +32,7 @@ export default function CtaBox({
             href={WHATSAPP_HREF}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackWhatsAppClick("cta_box_full")}
             className="inline-flex items-center gap-2.5 bg-[#25D366] hover:bg-[#1DAE56] text-white font-bold text-base px-7 py-4 rounded-xl shadow-xl shadow-green-900/30 transition-all duration-200 hover:scale-[1.02]"
           >
             <WhatsAppIcon className="w-5 h-5" />
@@ -53,6 +57,7 @@ export default function CtaBox({
           href={WHATSAPP_HREF}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => trackWhatsAppClick("cta_box_banner")}
           className="inline-flex items-center justify-center gap-2 bg-white text-blue-700 hover:bg-blue-50 font-bold text-sm px-5 py-3 rounded-xl transition-colors shrink-0"
         >
           <WhatsAppIcon className="w-4 h-4 text-[#25D366]" />

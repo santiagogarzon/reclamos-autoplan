@@ -1,5 +1,5 @@
-import { WHATSAPP_HREF } from "@/lib/constants";
 import { ArrowRight } from "lucide-react";
+import WhatsAppLink from "@/components/ui/WhatsAppLink";
 
 export default function FinalCTA() {
   return (
@@ -33,15 +33,13 @@ export default function FinalCTA() {
 
         {/* CTA buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a
-            href={WHATSAPP_HREF}
-            target="_blank"
-            rel="noopener noreferrer"
+          <WhatsAppLink
+            location="final_cta"
             className="inline-flex items-center gap-3 bg-[#25D366] hover:bg-[#1DAE56] text-white font-bold text-lg px-8 py-5 rounded-2xl shadow-2xl shadow-green-900/40 transition-all duration-200 hover:scale-[1.03] glow-green"
           >
             <WhatsAppIcon className="w-6 h-6" />
             Hablar por WhatsApp ahora
-          </a>
+          </WhatsAppLink>
           <div className="flex items-center gap-2 text-slate-500 text-sm sm:ml-2">
             <ArrowRight className="w-4 h-4" />
             Sin turnos · Sin formularios
