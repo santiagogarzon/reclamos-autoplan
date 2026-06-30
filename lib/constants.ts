@@ -3,7 +3,7 @@ export const SITE_CONFIG = {
   lawyer: "Nicolás Silva",
   title: "Abogado – Reclamos Autoplan",
   city: "Córdoba, Argentina",
-  email: "contacto@reclamosautoplan.com.ar",
+  email: "contacto@reclamoautoplan.com.ar",
   // Replace with real WhatsApp number: country code (54) + area code + number, no spaces or dashes
   whatsappNumber: "5493512319509",
   whatsappMessage:
