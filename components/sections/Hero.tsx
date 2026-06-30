@@ -54,12 +54,18 @@ export default function Hero() {
             </a>
           </div>
 
+          {/* Urgency bar */}
+          <div className="inline-flex items-center gap-2 bg-green-500/10 border border-green-500/20 text-green-400 text-sm font-medium px-4 py-2 rounded-full mb-8">
+            <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+            Respondemos en menos de 2 horas · Lunes a sábado
+          </div>
+
           {/* Trust signals */}
           <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
             {[
               `+${SITE_CONFIG.successCases} casos favorables`,
               "Atención directa",
-              "Respuesta rápida",
+              "Sin costo inicial",
             ].map((item) => (
               <div
                 key={item}

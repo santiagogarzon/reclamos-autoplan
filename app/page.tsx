@@ -8,6 +8,7 @@ import Problems from "@/components/sections/Problems";
 import HowItWorks from "@/components/sections/HowItWorks";
 import About from "@/components/sections/About";
 import CasesWeHandle from "@/components/sections/CasesWeHandle";
+import Testimonials from "@/components/sections/Testimonials";
 import Documentation from "@/components/sections/Documentation";
 import FAQ from "@/components/sections/FAQ";
 import SeoContent from "@/components/sections/SeoContent";
@@ -24,6 +25,7 @@ export default function HomePage() {
         <HowItWorks />
         <About />
         <CasesWeHandle />
+        <Testimonials />
         <Documentation />
         <FAQ />
         <SeoContent />

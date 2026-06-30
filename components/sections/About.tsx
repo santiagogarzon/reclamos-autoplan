@@ -1,5 +1,6 @@
 import { BadgeCheck, MapPin, Users } from "lucide-react";
 import { SITE_CONFIG } from "@/lib/constants";
+import AnimatedCounter from "@/components/ui/AnimatedCounter";
 
 export default function About() {
   return (
@@ -28,12 +29,16 @@ export default function About() {
               {/* Stats row */}
               <div className="grid grid-cols-2 gap-3">
                 <div className="bg-white/5 border border-white/10 rounded-xl p-4 text-center">
-                  <div className="text-3xl font-bold text-white mb-0.5">+100</div>
+                  <div className="text-3xl font-bold text-white mb-0.5">
+                    <AnimatedCounter target={100} prefix="+" />
+                  </div>
                   <div className="text-slate-400 text-xs">Casos favorables</div>
                 </div>
                 <div className="bg-white/5 border border-white/10 rounded-xl p-4 text-center">
-                  <div className="text-3xl font-bold text-white mb-0.5">🇦🇷</div>
-                  <div className="text-slate-400 text-xs">Todo el país</div>
+                  <div className="text-3xl font-bold text-white mb-0.5">
+                    <AnimatedCounter target={24} suffix="hs" />
+                  </div>
+                  <div className="text-slate-400 text-xs">Tiempo de respuesta</div>
                 </div>
               </div>
             </div>
