@@ -42,12 +42,12 @@ export default function About() {
             </h2>
             <p>
               Nicolás Silva es abogado en Córdoba, Argentina, especializado en
-              reclamos por demoras e incumplimientos en planes de ahorro vehicular.
+              reclamos por demoras e incumplimientos contractuales en planes de ahorro vehicular.
             </p>
             <p>
               Con más de <strong>100 casos favorables</strong>, trabaja directamente con
               personas que necesitan respuestas claras frente a problemas con
-              concesionarias y administradoras.
+              fábricas, concesionarias y administradoras de planes.
             </p>
             <blockquote className="about-quote">
               "Entender el caso rápido, explicar las opciones sin vueltas y
