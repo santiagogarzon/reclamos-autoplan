@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { SITE_CONFIG } from "@/lib/constants";
 
 export default function About() {
@@ -7,8 +8,14 @@ export default function About() {
         <div className="about-grid">
           {/* Credential card */}
           <div className="cred-card reveal">
-            <div className="cred-portrait">
-              <span className="ph-monogram">NS</span>
+            <div className="cred-portrait" style={{ position: "relative", overflow: "hidden" }}>
+              <Image
+                src="/logo-emblem.png"
+                alt="Emblema Reclamos Autoplan"
+                fill
+                style={{ objectFit: "cover", objectPosition: "center top" }}
+                sizes="280px"
+              />
             </div>
             <p className="cred-name">{SITE_CONFIG.lawyer}</p>
             <p className="cred-role">Abogado · Especialista en Reclamos de Autoplanes</p>

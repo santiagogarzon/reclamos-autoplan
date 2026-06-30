@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { SITE_CONFIG, WHATSAPP_HREF } from "@/lib/constants";
 import WhatsAppLink from "@/components/ui/WhatsAppLink";
 
@@ -56,9 +57,14 @@ export default function Hero() {
           {/* Portrait */}
           <div className="portrait-wrap reveal">
             <div className="portrait">
-              <div className="ph-figure">
-                <span className="ph-monogram">NS</span>
-              </div>
+              <Image
+                src="/logo-emblem.png"
+                alt="Reclamos Autoplan – emblema de justicia y autoplan"
+                fill
+                style={{ objectFit: "cover", objectPosition: "center" }}
+                priority
+                sizes="(max-width: 880px) 420px, 50vw"
+              />
               <p className="ph-note">Nicolás Silva · Abogado matrícula Córdoba</p>
             </div>
             <div className="portrait-badge">
