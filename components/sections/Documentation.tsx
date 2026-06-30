@@ -1,58 +1,48 @@
 import { DOCS, WHATSAPP_HREF } from "@/lib/constants";
-import { FileText, ArrowRight, CheckCircle } from "lucide-react";
+import WhatsAppLink from "@/components/ui/WhatsAppLink";
+
+const CHECK = (
+  <svg className="di-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <polyline points="20 6 9 17 4 12"/>
+  </svg>
+);
 
 export default function Documentation() {
   return (
-    <section className="bg-white py-20 md:py-28">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <section className="section-pad">
+      <div className="wrap">
+        <div className="doc-split">
           {/* Left: text */}
-          <div>
-            <p className="text-blue-600 text-sm font-semibold uppercase tracking-widest mb-3">
-              Documentación
+          <div className="reveal">
+            <span className="eyebrow" style={{ marginBottom: "20px" }}>Documentación</span>
+            <h2 style={{ marginTop: "4px", marginBottom: "18px" }}>Si tenés esto, mejor</h2>
+            <p style={{ color: "var(--muted)", fontSize: "17px", marginBottom: "24px" }}>
+              Tener documentación ayuda a analizar tu caso más rápido. Pero no es un
+              requisito para consultar — empezamos con lo que tengas.
             </p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#0F172A] mb-4">
-              Si tenés esto, mejor
-            </h2>
-            <p className="text-slate-500 text-lg leading-relaxed mb-6">
-              Tener documentación ayuda a analizar tu caso más rápido. Pero no
-              es un requisito para consultar — empezamos con lo que tengas.
-            </p>
-
-            <div className="bg-blue-50 border border-blue-100 rounded-2xl p-5 flex items-start gap-3">
-              <CheckCircle className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
-              <p className="text-slate-700 text-sm leading-relaxed">
-                <span className="font-semibold">Si no tenés todo, igual podés escribirnos.</span>
-                {" "}Vemos juntos qué tenés disponible y cómo avanzar desde ahí.
+            <div className="doc-note">
+              <p>
+                <strong>Si no tenés todo, igual podés escribirnos.</strong> Vemos
+                juntos qué tenés disponible y cómo avanzar desde ahí.
               </p>
             </div>
           </div>
 
           {/* Right: docs list */}
-          <div className="bg-slate-50 border border-slate-200 rounded-3xl p-6">
-            <div className="flex items-center gap-2 mb-5">
-              <div className="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center">
-                <FileText className="w-4 h-4 text-white" />
-              </div>
-              <span className="font-semibold text-slate-700 text-sm">Documentos útiles</span>
-            </div>
-            <ul className="space-y-3 mb-6">
-              {DOCS.map((doc, index) => (
-                <li key={index} className="flex items-center gap-3 bg-white border border-slate-200 rounded-xl px-4 py-3">
-                  <div className="w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0" />
-                  <span className="text-slate-700 text-sm font-medium">{doc}</span>
+          <div className="reveal">
+            <ul className="doc-list">
+              {DOCS.map((doc, i) => (
+                <li key={i} className="doc-item">
+                  {CHECK}
+                  {doc}
                 </li>
               ))}
             </ul>
-            <a
-              href={WHATSAPP_HREF}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-blue-700 hover:text-blue-900 font-semibold text-sm transition-colors group"
-            >
-              Escribir sin tener todo
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </a>
+            <div style={{ marginTop: "28px" }}>
+              <WhatsAppLink location="documentation" className="arrow-link">
+                Escribir sin tener todo →
+              </WhatsAppLink>
+            </div>
           </div>
         </div>
       </div>
