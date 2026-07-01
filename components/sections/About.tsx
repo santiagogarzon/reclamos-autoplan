@@ -16,6 +16,7 @@ export default function About() {
                 style={{ objectFit: "cover", objectPosition: "center top" }}
                 sizes="280px"
               />
+              <div className="portrait-veil" aria-hidden="true" />
             </div>
             <p className="cred-name">{SITE_CONFIG.lawyer}</p>
             <p className="cred-role">Abogado · Especialista en Reclamos de Autoplanes</p>

@@ -65,6 +65,7 @@ export default function Hero() {
                 priority
                 sizes="(max-width: 880px) 420px, 50vw"
               />
+              <div className="portrait-veil" aria-hidden="true" />
               <p className="ph-note">Nicolás Silva · Abogado matrícula Córdoba</p>
             </div>
             <div className="portrait-badge">
